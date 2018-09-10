@@ -99,6 +99,7 @@
 				363B5DE52146DFCF00217D1E /* Sources */,
 				363B5DE62146DFCF00217D1E /* Frameworks */,
 				363B5DE72146DFCF00217D1E /* Resources */,
+				1C8112D15301C09A5C5EB23C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +157,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C8112D15301C09A5C5EB23C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RIBs/RIBs.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RIBs.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D2D2B09914C139E74F7B9C02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
