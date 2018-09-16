@@ -13,6 +13,13 @@
 		363B5DF22146DFCF00217D1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B5DF02146DFCF00217D1E /* Main.storyboard */; };
 		363B5DF42146DFD000217D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363B5DF32146DFD000217D1E /* Assets.xcassets */; };
 		363B5DF72146DFD000217D1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363B5DF52146DFD000217D1E /* LaunchScreen.storyboard */; };
+		363FACB3214E566100E05739 /* SearchDisplayRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACAE214E566100E05739 /* SearchDisplayRouter.swift */; };
+		363FACB4214E566100E05739 /* SearchDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACAF214E566100E05739 /* SearchDisplayViewController.swift */; };
+		363FACB5214E566100E05739 /* SearchDisplayBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACB0214E566100E05739 /* SearchDisplayBuilder.swift */; };
+		363FACB6214E566100E05739 /* SearchDisplayInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACB1214E566100E05739 /* SearchDisplayInteractor.swift */; };
+		363FACB7214E566100E05739 /* SearchDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FACB2214E566100E05739 /* SearchDisplayViewController.xib */; };
+		363FACBC214E5B0100E05739 /* SearchNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACBB214E5B0100E05739 /* SearchNetworking.swift */; };
+		363FACBE214E5B4000E05739 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACBD214E5B4000E05739 /* SearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		363B5DF32146DFD000217D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		363B5DF62146DFD000217D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		363B5DF82146DFD000217D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		363FACAE214E566100E05739 /* SearchDisplayRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayRouter.swift; sourceTree = "<group>"; };
+		363FACAF214E566100E05739 /* SearchDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayViewController.swift; sourceTree = "<group>"; };
+		363FACB0214E566100E05739 /* SearchDisplayBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayBuilder.swift; sourceTree = "<group>"; };
+		363FACB1214E566100E05739 /* SearchDisplayInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayInteractor.swift; sourceTree = "<group>"; };
+		363FACB2214E566100E05739 /* SearchDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDisplayViewController.xib; sourceTree = "<group>"; };
+		363FACBB214E5B0100E05739 /* SearchNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworking.swift; sourceTree = "<group>"; };
+		363FACBD214E5B4000E05739 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		3809079744CD30ADD9DDD16E /* Pods_SimpleSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CE575638367D22AE553C83 /* Pods-SimpleSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch.release.xcconfig"; sourceTree = "<group>"; };
 		96486B132859C25FC46A3316 /* Pods-SimpleSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +75,8 @@
 		363B5DEB2146DFCF00217D1E /* SimpleSearch */ = {
 			isa = PBXGroup;
 			children = (
+				363FACBA214E5AD600E05739 /* Network */,
+				363FACB8214E566C00E05739 /* SearchDisplay */,
 				363B5DEC2146DFCF00217D1E /* AppDelegate.swift */,
 				363B5DEE2146DFCF00217D1E /* ViewController.swift */,
 				363B5DF02146DFCF00217D1E /* Main.storyboard */,
@@ -69,6 +85,27 @@
 				363B5DF82146DFD000217D1E /* Info.plist */,
 			);
 			path = SimpleSearch;
+			sourceTree = "<group>";
+		};
+		363FACB8214E566C00E05739 /* SearchDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				363FACAE214E566100E05739 /* SearchDisplayRouter.swift */,
+				363FACAF214E566100E05739 /* SearchDisplayViewController.swift */,
+				363FACB0214E566100E05739 /* SearchDisplayBuilder.swift */,
+				363FACB1214E566100E05739 /* SearchDisplayInteractor.swift */,
+				363FACB2214E566100E05739 /* SearchDisplayViewController.xib */,
+			);
+			path = SearchDisplay;
+			sourceTree = "<group>";
+		};
+		363FACBA214E5AD600E05739 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				363FACBB214E5B0100E05739 /* SearchNetworking.swift */,
+				363FACBD214E5B4000E05739 /* SearchService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		55DC5E14F7859906E8487112 /* Frameworks */ = {
@@ -151,6 +188,7 @@
 				363B5DF72146DFD000217D1E /* LaunchScreen.storyboard in Resources */,
 				363B5DF42146DFD000217D1E /* Assets.xcassets in Resources */,
 				363B5DF22146DFCF00217D1E /* Main.storyboard in Resources */,
+				363FACB7214E566100E05739 /* SearchDisplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				363B5DEF2146DFCF00217D1E /* ViewController.swift in Sources */,
+				363FACB4214E566100E05739 /* SearchDisplayViewController.swift in Sources */,
+				363FACBC214E5B0100E05739 /* SearchNetworking.swift in Sources */,
+				363FACB5214E566100E05739 /* SearchDisplayBuilder.swift in Sources */,
+				363FACB6214E566100E05739 /* SearchDisplayInteractor.swift in Sources */,
+				363FACBE214E5B4000E05739 /* SearchService.swift in Sources */,
 				363B5DED2146DFCF00217D1E /* AppDelegate.swift in Sources */,
+				363FACB3214E566100E05739 /* SearchDisplayRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

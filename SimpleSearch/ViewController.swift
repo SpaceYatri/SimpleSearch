@@ -13,6 +13,14 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		SearchRequest.getResult(for: "batman", pageNumber: 1) { (response) in
+			switch response {
+			case .success(let value):
+				print(value.pageNumber)
+			case .failure(let error):
+				print(error.localizedDescription)
+			}
+		}
 	}
 
 	override func didReceiveMemoryWarning() {
