@@ -7,5 +7,6 @@ target 'SimpleSearch' do
 
 	# Pods for SimpleSearch
 	pod 'RIBs', '~> 0.9'
+	pod 'Alamofire', '~> 4.7'
 
 end
