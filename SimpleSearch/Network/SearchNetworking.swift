@@ -8,7 +8,7 @@
 
 import Alamofire
 
-enum SearchResultResponse<T,V> {
+enum NetworkResponse<T,V> {
 	case success(T)
 	case failure(V)
 }
@@ -21,8 +21,17 @@ enum SearchResultError: Error {
 	case unknown(Error)
 }
 
+enum ImageResultError: Error {
+	case noDataReceived
+	case undecodableImageData
+	case unknown(Error)
+}
+
+typealias SearchResponse = (NetworkResponse<PageResult, SearchResultError>) -> Void
+typealias ImageResponse = (NetworkResponse<UIImage, ImageResultError>) -> Void
+
 enum SearchRequest {
-	static func getResult(for searchText: String, pageNumber: Int, completion: @escaping ( (SearchResultResponse<PageResult, SearchResultError>) -> Void)) {
+	static func getResult(for searchText: String, pageNumber: Int, completion: @escaping SearchResponse) {
 		let params: Parameters = [Constant.queryKey: searchText, Constant.pageKey: pageNumber]
 		Alamofire.request(Constant.searchURL, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil)
 			.responseJSON { (response) in
@@ -51,19 +60,8 @@ enum SearchRequest {
 	}
 }
 
-enum ImageResultResponse<T,V> {
-	case success(T)
-	case failure(V)
-}
-
-enum ImageResultError: Error {
-	case noDataReceived
-	case undecodableImageData
-	case unknown(Error)
-}
-
 enum GetImage {
-	static func fromRelativePath(_ imagePath: String, completion: @escaping ((ImageResultResponse<UIImage, ImageResultError>) -> Void)) {
+	static func fromRelativePath(_ imagePath: String, completion: @escaping ImageResponse) {
 		let imageURL = Constant.imageBasePath.appendingPathComponent(imagePath)
 		Alamofire.request(imageURL).response { (response) in
 			if let error = response.error {

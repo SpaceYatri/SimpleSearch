@@ -20,6 +20,7 @@
 		363FACB7214E566100E05739 /* SearchDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363FACB2214E566100E05739 /* SearchDisplayViewController.xib */; };
 		363FACBC214E5B0100E05739 /* SearchNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACBB214E5B0100E05739 /* SearchNetworking.swift */; };
 		363FACBE214E5B4000E05739 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363FACBD214E5B4000E05739 /* SearchService.swift */; };
+		36D32452214F831F0099E212 /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D32451214F831F0099E212 /* SearchResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		363FACB2214E566100E05739 /* SearchDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDisplayViewController.xib; sourceTree = "<group>"; };
 		363FACBB214E5B0100E05739 /* SearchNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNetworking.swift; sourceTree = "<group>"; };
 		363FACBD214E5B4000E05739 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		36D32451214F831F0099E212 /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		3809079744CD30ADD9DDD16E /* Pods_SimpleSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CE575638367D22AE553C83 /* Pods-SimpleSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch.release.xcconfig"; sourceTree = "<group>"; };
 		96486B132859C25FC46A3316 /* Pods-SimpleSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleSearch/Pods-SimpleSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				363FACBB214E5B0100E05739 /* SearchNetworking.swift */,
 				363FACBD214E5B4000E05739 /* SearchService.swift */,
+				36D32451214F831F0099E212 /* SearchResultModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				363B5DEF2146DFCF00217D1E /* ViewController.swift in Sources */,
 				363FACB4214E566100E05739 /* SearchDisplayViewController.swift in Sources */,
+				36D32452214F831F0099E212 /* SearchResultModel.swift in Sources */,
 				363FACBC214E5B0100E05739 /* SearchNetworking.swift in Sources */,
 				363FACB5214E566100E05739 /* SearchDisplayBuilder.swift in Sources */,
 				363FACB6214E566100E05739 /* SearchDisplayInteractor.swift in Sources */,
