@@ -50,3 +50,39 @@ enum SearchRequest {
 		static let pageKey: String = "page"
 	}
 }
+
+enum ImageResultResponse<T,V> {
+	case success(T)
+	case failure(V)
+}
+
+enum ImageResultError: Error {
+	case noDataReceived
+	case undecodableImageData
+	case unknown(Error)
+}
+
+enum GetImage {
+	static func fromRelativePath(_ imagePath: String, completion: @escaping ((ImageResultResponse<UIImage, ImageResultError>) -> Void)) {
+		let imageURL = Constant.imageBasePath.appendingPathComponent(imagePath)
+		Alamofire.request(imageURL).response { (response) in
+			if let error = response.error {
+				completion(.failure(.unknown(error)))
+				return
+			}
+			guard let imageData = response.data else {
+				completion(.failure(.noDataReceived))
+				return
+			}
+			guard let image = UIImage(data: imageData) else {
+				completion(.failure(.undecodableImageData))
+				return
+			}
+			completion(.success(image))
+		}
+	}
+
+	private enum Constant {
+		static let imageBasePath: URL = URL(string: "http://image.tmdb.org/t/p/w92")!
+	}
+}
